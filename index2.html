@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal Color Jewels</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Royal Color Jewels</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Gemstones</a></li>
+        <li><a href="#order">Order Now</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Royal Color<br><span>Jewels</span></h1>
+      <p class="tagline">Crafted for Queens, Designed for Dreams.</p>
+      <button class="contact-btn">contact us</button>
+
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+
+      <div class="logos">
+        <img src="ica.png" alt="ICA logo">
+        <img src="gjepc.png" alt="GJEPC logo">
+      </div>
+    </div>
+  </section>
+
+  <!-- Slideshow Section -->
+  <section class="slideshow-section">
+    <div class="slideshow-container">
+      <img src="gem1.png" class="slide fade">
+      <img src="gem2.png" class="slide fade">
+      <img src="gem3.png" class="slide fade">
+      <img src="gem4.png" class="slide fade">
+      <img src="gem5.png" class="slide fade">
+      <img src="gem6.png" class="slide fade">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="about-content">
+      <h2>ABOUT US</h2>
+      <p>
+        At Royal Color Jewels, established in 2018, we pride ourselves on delivering exceptional quality in every gemstone we offer.<br>
+        Our collection features some of the rarest and most valuable gemstones, each handpicked for its brilliance and uniqueness.<br>
+        Our first office is located in Arusha, Tanzania, and our second office is based in Jaipur, Rajasthan.
+      </p>
+      <img src="4.png" alt="Royal Color Logo" class="about-logo">
+    </div>
+  </section>
+
+  <!-- Gemstone Section -->
+  <section class="gemstone-section" id="products">
+    <div class="gemstone-content">
+      <h2>WE WORK IN</h2>
+
+      <h3 class="stone-name">TANZANITE</h3>
+      <div class="gemstone-wrapper">
+        <img src="5.png" alt="Tanzanite Gemstone" class="gemstone-img">
+        <p class="gemstone-desc">
+          Tanzanite, a rare violet-blue gemstone found only in Tanzania, known for its exclusivity and mystical allure.
+        </p>
+      </div>
+
+      <h3 class="stone-name">TSAVORITE</h3>
+      <div class="gemstone-wrapper">
+        <p class="gemstone-desc">
+          Tsavorite, a vibrant green garnet from East Africa, prized for its vivid color, brilliance, and rarity.
+        </p>
+        <img src="6.png" alt="Tsavorite Gemstone" class="gemstone-img">
+      </div>
+
+      <h3 class="stone-name">PINK SPINEL</h3>
+      <div class="gemstone-wrapper">
+        <img src="7.png" alt="Pink Spinel Gemstone" class="gemstone-img">
+        <p class="gemstone-desc">
+          Pink Spinel, rare and romantic, shines with its own radiant light, symbolizing hope and renewal.
+        </p>
+      </div>
+      <h4 class="coming-soon">WE WILL SHORTLY BE IN JEWELLERY</h4>
+    </div>
+  </section>
+
+  <!-- Order Now Section -->
+  <section class="order-section" id="order">
+    <div class="order-content">
+      <h2>ORDER NOW</h2>
+      <p>
+        Simply email us your gemstone requirements, and we’ll dispatch your stones within 7 days — worldwide shipping available.
+      </p>
+      <p class="highlight">
+        More than just jewellery — It’s your legacy. It’s your asset.
+      </p>
+      <p>
+        Each stone carries elegance and enduring value.<br>
+        We offer a buyback of up to 60% — turning luxury into liquidity. <em>Terms and conditions apply.</em>
+      </p>
+      <p class="mail-id"><strong>MAIL ID - royalcolorjewels@gmail.com</strong></p>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="contact-section" id="contact">
+    <div class="contact-content">
+      <h2>CONTACT US</h2>
+      <h3>Royal Color<br>Jewels</h3>
+
+      <div class="contact-icons">
+        <a href="https://www.linkedin.com/company/royal-color-jewels/" target="_blank">
+          <img src="linkedin.png" alt="LinkedIn" class="contact-icon">
+        </a>
+        <a href="https://www.instagram.com/royalcolorjewels?igsh=cHB5M2R6Z2VqcHE0&utm_source=qr" target="_blank">
+          <img src="instagram.png" alt="Instagram" class="contact-icon">
+        </a>
+        <a href="mailto:royalcolorjewels@gmail.com">
+          <img src="email.png" alt="Email" class="contact-icon">
+        </a>
+      </div>
+
+      <p class="contact-tagline">Where Royal Dreams Take Shape in Stone</p>
+    </div>
+  </section>
+
+  <!-- Slideshow Script -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Change every 3 seconds
+    }
+  </script>
+
+</body>
+</html>
+
